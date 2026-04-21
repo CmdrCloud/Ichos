@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mood Music App - Mobile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        /* Ocultar barra de desplazamiento para un look más nativo de app */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white h-screen overflow-hidden flex justify-center">
+
+    <div class="w-full max-w-md h-full relative flex flex-col bg-zinc-950 shadow-2xl overflow-hidden sm:border-x sm:border-zinc-800">
+
+        <main class="flex-1 overflow-y-auto p-5 pb-40">
+            <header class="flex justify-between items-center mb-8 mt-2">
+                <h1 class="text-3xl font-bold tracking-wide">Playlists</h1>
+            </header>
+
+            <div class="grid grid-cols-2 gap-4">
+                
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-face-smile text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Feliz</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-slate-600 to-blue-800 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-cloud-rain text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Triste</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-indigo-500 to-purple-700 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-headphones text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Focus</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-red-600 to-zinc-900 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Energía</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-teal-400 to-emerald-700 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-leaf text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Relax</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-martini-glass text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Fiesta</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-zinc-800 to-black rounded-2xl shadow-lg border border-zinc-800 flex items-center justify-center">
+                        <i class="fa-solid fa-moon text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Dormir</span>
+                </div>
+
+                <div class="flex flex-col items-center active:scale-95 transition-transform cursor-pointer">
+                    <div class="w-full aspect-square bg-gradient-to-br from-rose-400 to-red-500 rounded-2xl shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-5xl text-white opacity-90"></i>
+                    </div>
+                    <span class="mt-3 text-xs font-semibold tracking-widest uppercase text-zinc-300">Romance</span>
+                </div>
+            </div>
+        </main>
+
+        <div class="absolute bottom-[4.5rem] left-2 right-2 bg-zinc-800 rounded-xl p-2 flex items-center justify-between shadow-xl border border-zinc-700">
+            <div class="flex items-center gap-3 overflow-hidden w-2/3">
+                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded flex shrink-0 items-center justify-center shadow-md">
+                    <i class="fa-solid fa-music text-white opacity-60 text-sm"></i>
+                </div>
+                <div class="flex flex-col truncate">
+                    <span class="text-sm font-bold text-white truncate">Beats para Codear</span>
+                    <span class="text-xs text-zinc-400 truncate">Focus Mode</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 pr-2">
+                <button class="text-zinc-300 hover:text-white">
+                    <i class="fa-solid fa-play text-xl"></i>
+                </button>
+                <button class="text-zinc-300 hover:text-white">
+                    <i class="fa-solid fa-forward-step text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="absolute bottom-0 w-full h-[4.5rem] bg-zinc-900 border-t border-zinc-800 flex justify-around items-center px-2 z-10 pb-2">
+            <button class="flex flex-col items-center gap-1 text-white">
+                <i class="fa-solid fa-book-open text-xl"></i>
+                <span class="text-[10px] font-medium">Librería</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                <span class="text-[10px] font-medium">Buscar</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors relative -top-3">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-black">
+                    <i class="fa-solid fa-plus text-2xl"></i>
+                </div>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-record-vinyl text-xl"></i>
+                <span class="text-[10px] font-medium">DJ</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 text-zinc-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-circle-user text-xl"></i>
+                <span class="text-[10px] font-medium">Perfil</span>
+            </button>
+        </nav>
+
+    </div>
+
+</body>
+</html>
