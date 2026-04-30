@@ -8,6 +8,7 @@ import '../widgets/playlist_tile.dart';
 import '../widgets/mini_player.dart';
 import '../widgets/bottom_bar.dart';
 import 'search_screen.dart';
+import 'profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return const Center(child: Text('Library (Coming Soon)', style: TextStyle(color: Colors.white)));
       case 3:
-        return const Center(child: Text('Profile (Coming Soon)', style: TextStyle(color: Colors.white)));
+        return const ProfileScreen();
       default:
         return _buildHomeContent();
     }
